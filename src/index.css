@@ -84,6 +84,7 @@ body {
     color: var(--hl-orange);
     scale: 1;
     transition: 0.05s ease-in;
+    cursor: pointer;
 }
 
 #header li a:hover,
