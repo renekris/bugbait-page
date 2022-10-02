@@ -15,7 +15,7 @@ function createHeader() {
 
     // NAV
     const elUl = document.createElement('ul');
-    const aNames = ['Home', 'Stores', 'Contact'];
+    const aNames = ['Home', 'Locations', 'Contact'];
 
     for (let i = 0; i < aNames.length; i++) {
         const elLi = document.createElement('li');

@@ -101,10 +101,10 @@ body {
     justify-content: center;
     height: 100%;
     overflow: auto;
+    width: 100%;
 }
 
 #content {
-    position: relative;
     height: 100%;
     width: 80%;
     margin: 10% 0;
@@ -121,6 +121,29 @@ body {
     display: flex;
     justify-content: center;
     margin: 0 0 1rem 0;
+}
+
+#content img {
+    width: 100%;
+    height: auto;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5%;
+}
+
+.image-grid img {
+    border: var(--hl-orange) 3px solid;
+    padding: 2.5%;
+    transition: 0.05s ease;
+}
+
+.image-grid img:hover {
+    scale: 1.15;
+    z-index: 100;
+    cursor: zoom-in;
 }
 
 /* FOOTER */

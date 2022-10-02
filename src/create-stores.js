@@ -1,5 +1,0 @@
-function createStores() {
-
-}
-
-export { createStores };

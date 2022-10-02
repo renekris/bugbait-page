@@ -1,6 +1,6 @@
 import { createHeader, createFooter, createContentWrapper } from './create-base';
 import { createHome } from './create-home.js';
-import { createStores } from './create-stores';
+import { createLocations } from './create-locations';
 import { createContact } from './create-contact';
 import './index.css';
 
@@ -16,7 +16,7 @@ import './index.css';
 
     // DOM CACHE
     const elHome = document.getElementById('home');
-    const elStores = document.getElementById('stores');
+    const elStores = document.getElementById('locations');
     const elContact = document.getElementById('contact');
 
     // NAV EVENT LISTENERS
@@ -30,7 +30,7 @@ function eventHome() {
 }
 
 function eventStores() {
-    replaceContent(createStores());
+    replaceContent(createLocations());
 }
 
 function eventContact() {
