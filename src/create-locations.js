@@ -11,7 +11,7 @@ function createLocations() {
 
 
     const elH2 = document.createElement('h2');
-    elH2.textContent = 'These are our locations that are available to visit at working hours.';
+    elH2.textContent = 'These are our locations that are available to be visited during working hours.';
     elContent.appendChild(elH2);
 
 
