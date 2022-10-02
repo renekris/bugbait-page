@@ -96,9 +96,10 @@ body {
 
 /* CONTENT */
 
-.content-wrapper {
+#content-wrapper {
     display: flex;
     justify-content: center;
+    height: 100%;
     overflow: auto;
 }
 

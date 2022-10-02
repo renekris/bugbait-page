@@ -1,5 +1,5 @@
 {
-    "name": "restaurant-page",
+    "name": "bugbait-page",
     "version": "1.0.0",
     "description": "This repository follows The Odin Project curriculum",
     "main": "index.js",
@@ -9,15 +9,15 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/renekris/restaurant-page.git"
+        "url": "git+https://github.com/renekris/bugbait-page.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/renekris/restaurant-page/issues"
+        "url": "https://github.com/renekris/bugbait-page/issues"
     },
-    "homepage": "https://github.com/renekris/restaurant-page#readme",
+    "homepage": "https://github.com/renekris/bugbait-page#readme",
     "devDependencies": {
         "css-loader": "^6.7.1",
         "style-loader": "^3.3.1",

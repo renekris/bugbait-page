@@ -1,10 +1,8 @@
-function createMenu() {
+function createHome() {
     // CREATE PARENT
-    const elWrapper = document.createElement('div');
     const elContent = document.createElement('div');
 
     // CONTENT
-    elWrapper.className = 'content-wrapper';
     elContent.id = 'content';
 
     const elH1 = document.createElement('h1');
@@ -25,10 +23,8 @@ function createMenu() {
     elContent.appendChild(elP);
 
 
-
-    elWrapper.appendChild(elContent);
     // RETURN
-    return elWrapper;
+    return elContent;
 }
 
-export { createMenu };
+export { createHome };

@@ -1,5 +1,7 @@
-import { createHeader, createFooter } from "./create-base";
-import { createMenu } from './create-menu.js';
+import { createHeader, createFooter, createContentWrapper } from './create-base';
+import { createHome } from './create-home.js';
+import { createStores } from './create-stores';
+import { createContact } from './create-contact';
 import './index.css';
 
 
@@ -9,34 +11,35 @@ import './index.css';
 
     // DRAW HOME ELEMENTS
     elContainer.append(createHeader());
-    elContainer.append(createMenu());
+    elContainer.append(createContentWrapper(createHome()));
     elContainer.append(createFooter());
 
     // DOM CACHE
     const elHome = document.getElementById('home');
-    const elStores = document.getElementById('home');
-    const elContact = document.getElementById('home');
+    const elStores = document.getElementById('stores');
+    const elContact = document.getElementById('contact');
 
-    // EVENT LISTENERS
+    // NAV EVENT LISTENERS
     elHome.addEventListener('pointerdown', eventHome);
     elStores.addEventListener('pointerdown', eventStores);
     elContact.addEventListener('pointerdown', eventContact);
 })();
 
 function eventHome() {
-    elContainer.append(createHeader());
-    elContainer.append(createMenu());
-    elContainer.append(createFooter());
+    replaceContent(createHome());
 }
 
 function eventStores() {
-    elContainer.append(createHeader());
-    elContainer.append(createStores());
-    elContainer.append(createFooter());
+    replaceContent(createStores());
 }
 
 function eventContact() {
-    elContainer.append(createHeader());
-    elContainer.append(createContact());
-    elContainer.append(createFooter());
+    replaceContent(createContact());
+}
+
+function replaceContent(element = null) {
+    if (!(element instanceof HTMLDivElement) || element === null) return;
+    const contentWrapper = document.getElementById('content-wrapper');
+    contentWrapper.innerHTML = '';
+    contentWrapper.append(element);
 }

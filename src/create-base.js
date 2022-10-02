@@ -32,6 +32,17 @@ function createHeader() {
     return elHeader;
 }
 
+function createContentWrapper(appendElement = null) {
+    const elWrapper = document.createElement('div');
+    elWrapper.id = 'content-wrapper';
+
+    if (appendElement !== null) {
+        elWrapper.appendChild(appendElement);
+    }
+
+    return elWrapper;
+}
+
 function createFooter() {
     // CREATE PARENT
     const elFooter = document.createElement('div');
@@ -46,4 +57,4 @@ function createFooter() {
     return elFooter;
 }
 
-export { createHeader, createFooter };
+export { createHeader, createFooter, createContentWrapper };
