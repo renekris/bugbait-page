@@ -51,6 +51,8 @@ body {
     border-bottom: 2px solid var(--hl-orange);
     box-shadow: 0 0 3px 2px var(--hl-orange);
     z-index: 100;
+    /* added to header and footer so box shadow effect wouldn't be visible on image open blur */
+    clip-path: inset(0 0 -200px 0);
 }
 
 #header .icon {
@@ -107,11 +109,11 @@ body {
 #content {
     height: 100%;
     width: 80%;
-    margin: 10% 0;
+    margin: 2.5% 0;
     display: flex;
     flex-direction: column;
     height: fit-content;
-    padding: 5%;
+    padding: 2.5%;
     background-color: #0a0a0a;
     color: var(--hl-orange);
     border-radius: 25px;
@@ -123,12 +125,20 @@ body {
     margin: 0 0 1rem 0;
 }
 
+#content h2 {
+    display: flex;
+    justify-content: center;
+}
+
+/* LOCATIONS */
+
 #content img {
     width: 100%;
-    height: auto;
+    max-height: auto;
 }
 
 .image-grid {
+    margin: 4% 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 5%;
@@ -136,15 +146,53 @@ body {
 
 .image-grid img {
     border: var(--hl-orange) 3px solid;
-    padding: 2.5%;
-    transition: 0.05s ease;
+    padding: 1.5%;
+    transition: 0.07s ease-out;
 }
 
 .image-grid img:hover {
-    scale: 1.15;
-    z-index: 100;
+    scale: 1.1;
+    z-index: 1;
     cursor: zoom-in;
 }
+
+body:has(#modal) #container {
+    filter: blur(0.5rem);
+}
+
+#modal {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0a0a0a55;
+    z-index: 200;
+    cursor: zoom-out;
+}
+
+#modal-image {
+    image-rendering: pixelated;
+    cursor: default;
+    width: 100%;
+    height: 80%;
+
+    object-fit: contain;
+}
+
+/* @media (max-width: 1000px) {
+    #modal-image {
+        width: 80%;
+        max-width: auto;
+        height: 80%;
+        max-height: 100%;
+    }
+} */
+
+/* CONTACT */
 
 /* FOOTER */
 
@@ -161,6 +209,7 @@ body {
     font-size: 0.5rem;
     box-shadow: 0 0 2px 1px var(--hl-orange);
     z-index: 100;
+    clip-path: inset(-200px 0 0 0);
 }
 
 /* KEYFRAMES */

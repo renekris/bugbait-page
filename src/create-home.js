@@ -10,7 +10,7 @@ function createHome() {
     elContent.appendChild(elH1);
 
 
-    let elP = document.createElement('p');
+    let elP = document.createElement('h2');
     elP.textContent = 'Half-Life Bugbait is a family of stores where Half-Life foods and weapons are available to purchase.';
     elContent.appendChild(elP);
 

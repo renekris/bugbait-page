@@ -34,8 +34,8 @@ function createLocations() {
         for (let x = 0; x < HOW_MANY_IMAGES_PER_LOCATION_NAME; x++) {
             const elImg = document.createElement('img');
             elImg.src = `./img/${locationNames[y]}${x + 1}.jpg`;
-            console.log(`./img/${locationNames[y]}${x + 1}.jpg`);
             elImg.alt = `${locationNames[y]}${x + 1}`;
+            elImg.addEventListener('pointerup', eventImageZoom)
             elImgDiv.appendChild(elImg);
         }
         elContent.appendChild(elDiv);
@@ -43,6 +43,28 @@ function createLocations() {
 
     // RETURN
     return elContent;
+}
+
+function eventImageZoom(e) {
+    const currentImage = e.target.alt;
+    displayModal(currentImage);
+}
+
+function displayModal(imageName) {
+    // CONTENT
+    const elModal = document.createElement('div');
+    elModal.id = 'modal';
+    const elImage = document.createElement('img');
+    elImage.id = 'modal-image'
+    elImage.src = `./img/${imageName}.png`;
+    elImage.alt = `${imageName}`;
+
+    elModal.addEventListener('pointerup', () => {
+        elModal.remove();
+    });
+
+    elModal.appendChild(elImage);
+    document.body.appendChild(elModal);
 }
 
 export { createLocations };

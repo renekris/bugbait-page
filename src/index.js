@@ -20,9 +20,9 @@ import './index.css';
     const elContact = document.getElementById('contact');
 
     // NAV EVENT LISTENERS
-    elHome.addEventListener('pointerdown', eventHome);
-    elStores.addEventListener('pointerdown', eventStores);
-    elContact.addEventListener('pointerdown', eventContact);
+    elHome.addEventListener('pointerup', eventHome);
+    elStores.addEventListener('pointerup', eventStores);
+    elContact.addEventListener('pointerup', eventContact);
 })();
 
 function eventHome() {
