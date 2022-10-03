@@ -11,7 +11,7 @@ function createContact() {
 
 
     const elH2 = document.createElement('h2');
-    elH2.textContent = 'Our workers, contact is available directly.';
+    elH2.textContent = 'Our workers. contact is available directly.';
     elContent.appendChild(elH2);
 
     const elUserContacts = document.createElement('div');
@@ -26,10 +26,10 @@ function createContact() {
     users.push(new User('Kert', 'Scientist', 'kert@bugbait.com', './img/user/scientist4.png', 'PhD. Kert'));
 
 
-    const elUserDiv = document.createElement('div');
-    elUserDiv.className = 'user';
     for (let i = 0; i < users.length; i++) {
         const user = users[i];
+        const elUserDiv = document.createElement('div');
+        elUserDiv.className = 'user';
 
         const elUserImg = document.createElement('img');
         elUserImg.src = user.img;
@@ -48,9 +48,9 @@ function createContact() {
         elContact.appendChild(elP);
 
         elUserDiv.append(elUserImg, elContact);
+        elUserContacts.appendChild(elUserDiv);
     }
 
-    elUserContacts.appendChild(elUserDiv);
     // RETURN
     return elContent;
 }
