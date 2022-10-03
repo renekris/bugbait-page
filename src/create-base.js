@@ -6,6 +6,7 @@ function createHeader() {
     // ICON
     const elIconLink = document.createElement('a');
     elIconLink.className = 'icon';
+    elIconLink.href = '#';
     const elIconImage = document.createElement('img');
     elIconImage.src = './svg/Orange_lambda.svg';
     elIconImage.alt = 'Lambda Icon';
@@ -21,7 +22,7 @@ function createHeader() {
         const elLi = document.createElement('li');
         const elA = document.createElement('a');
         elA.textContent = aNames[i];
-        elA.id = aNames[i].toLowerCase();
+        elLi.id = aNames[i].toLowerCase();
         elLi.appendChild(elA);
         elUl.appendChild(elLi);
     }
